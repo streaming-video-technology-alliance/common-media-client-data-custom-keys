@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/StreamingVideoTechnologyAlliance/common-media-client-data-custom-keys/schemas/registry.schema.json",
+  "title": "CMCDv2 Custom Keys Registry",
+  "description": "Schema for the machine-readable list of registered CMCDv2 custom keys.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["key", "description", "valueType", "headerName", "added"],
+    "additionalProperties": false,
+    "properties": {
+      "key": {
+        "type": "string",
+        "description": "Full key name (reverseDNS.namespace-field). Must contain both namespace and field; namespace-only keys are not allowed.",
+        "pattern": "^[a-z0-9]+(\\.[a-z0-9]+)+\\.[a-z0-9]+-[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "namespace": {
+        "type": "string",
+        "description": "Namespace segment for grouping; optional in JSON but required in key format.",
+        "pattern": "^[a-z0-9]+$"
+      },
+      "field": {
+        "type": "string",
+        "description": "Field segment; optional in JSON but required in key format.",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "description": {
+        "type": "string",
+        "description": "Short, clear purpose of the key."
+      },
+      "valueType": {
+        "type": "string",
+        "enum": ["string", "token"],
+        "description": "CMCD custom key value type: STRING or TOKEN only (per spec). Values MUST be at most 64 characters."
+      },
+      "headerName": {
+        "type": "string",
+        "enum": ["CMCD-Object", "CMCD-Request", "CMCD-Session", "CMCD-Status"],
+        "description": "Header name per CTA-5004-A Section 3.1 (Header field definition)."
+      },
+      "example": {
+        "type": "string",
+        "maxLength": 64,
+        "description": "Optional example value (max 64 characters per CMCD spec)."
+      },
+      "added": {
+        "type": "string",
+        "format": "date",
+        "description": "Date the key was added to the registry (YYYY-MM-DD)."
+      },
+      "source": {
+        "type": "string",
+        "format": "uri-reference",
+        "description": "Optional link to the GitHub issue or discussion."
+      }
+    }
+  }
+}

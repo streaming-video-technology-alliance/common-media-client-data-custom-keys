@@ -1,0 +1,80 @@
+/**
+ * Generate keys/README.md from keys/registry.json.
+ *
+ * Usage (from repo root): node scripts/generate-keys-readme.js
+ *
+ * After adding or editing keys in keys/registry.json, run this script to
+ * regenerate the human-readable keys/README.md. Commit both files.
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const repoRoot = path.join(__dirname, '..');
+const registryPath = path.join(repoRoot, 'keys', 'registry.json');
+const readmePath = path.join(repoRoot, 'keys', 'README.md');
+
+function esc(s) {
+  if (s == null || s === '') return '';
+  return String(s).replace(/\|/g, '\\|').trim();
+}
+
+function tableRow(entry) {
+  return [
+    esc(entry.key),
+    esc(entry.namespace || ''),
+    esc(entry.field || ''),
+    esc(entry.description),
+    esc(entry.valueType),
+    esc(entry.headerName),
+    esc(entry.example ?? ''),
+    esc(entry.added),
+  ].join(' | ');
+}
+
+function renderTable(entries) {
+  const header = '| Key | Namespace | Field | Description | Value type | Header name | Example | Added |';
+  const separator = '| --- | --- | --- | --- | --- | --- | --- | --- |';
+  const rows = entries.map(tableRow).map((r) => '| ' + r + ' |');
+  return [header, separator, ...rows].join('\n');
+}
+
+function namespaceLabel(ns) {
+  return ns.charAt(0).toUpperCase() + ns.slice(1) + ' keys';
+}
+
+const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+
+const byNamespace = {};
+for (const entry of registry) {
+  const ns = entry.namespace || 'other';
+  if (!byNamespace[ns]) byNamespace[ns] = [];
+  byNamespace[ns].push(entry);
+}
+
+const namespaces = Object.keys(byNamespace).sort();
+
+const sections = namespaces.map((ns) => {
+  const entries = byNamespace[ns].sort((a, b) => a.key.localeCompare(b.key));
+  const title = `### ${namespaceLabel(ns)}`;
+  const table = renderTable(entries);
+  return title + '\n\n' + table;
+});
+
+const intro = `# Registered custom keys
+
+This page is an overview of all registered custom keys. It is generated from the underlying registry [registry.json](registry.json).
+
+`;
+
+const footer = `
+
+---
+
+To propose a new key, see [CONTRIBUTING.md](../CONTRIBUTING.md). Key format and rules: [docs/key-schema.md](../docs/key-schema.md).
+`;
+
+const body = intro + sections.join('\n\n') + footer;
+
+fs.writeFileSync(readmePath, body, 'utf8');
+console.log('Written:', readmePath);

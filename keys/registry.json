@@ -1,0 +1,352 @@
+[
+  {
+    "key": "org.svta.accessibility-audio-description",
+    "namespace": "accessibility",
+    "field": "audio-description",
+    "description": "Whether audio description is enabled (e.g. true, false).",
+    "valueType": "string",
+    "headerName": "CMCD-Status",
+    "example": "false",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.accessibility-captions",
+    "namespace": "accessibility",
+    "field": "captions",
+    "description": "Whether captions/subtitles are enabled (e.g. true, false).",
+    "valueType": "string",
+    "headerName": "CMCD-Status",
+    "example": "true",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.application-configuration",
+    "namespace": "application",
+    "field": "configuration",
+    "description": "Application configuration or environment identifier.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "production",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.application-domain",
+    "namespace": "application",
+    "field": "domain",
+    "description": "Domain or origin from which the application is served.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "app.example.com",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.application-name",
+    "namespace": "application",
+    "field": "name",
+    "description": "Application or site name.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "MyStreamingApp",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.application-type",
+    "namespace": "application",
+    "field": "type",
+    "description": "Application type (e.g. web, native, embedded).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "web",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.application-version",
+    "namespace": "application",
+    "field": "version",
+    "description": "Application version.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "3.0.1",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.connection-strength",
+    "namespace": "connection",
+    "field": "strength",
+    "description": "Connection strength or quality indicator.",
+    "valueType": "string",
+    "headerName": "CMCD-Status",
+    "example": "good",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.connection-type",
+    "namespace": "connection",
+    "field": "type",
+    "description": "Network connection type (e.g. wifi, mobile, fixed, ethernet).",
+    "valueType": "string",
+    "headerName": "CMCD-Status",
+    "example": "wifi",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.content-age-rating",
+    "namespace": "content",
+    "field": "age-rating",
+    "description": "Age classification of content (e.g. 12+, 18+).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "12+",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.content-episode-number",
+    "namespace": "content",
+    "field": "episode-number",
+    "description": "Episode number within a season (for episodic content).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "3",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.content-genre",
+    "namespace": "content",
+    "field": "genre",
+    "description": "Content genre or category (e.g. movie, news, sports).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "movie",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.content-language",
+    "namespace": "content",
+    "field": "language",
+    "description": "Content language code (e.g. en, de).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "en",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.content-provider",
+    "namespace": "content",
+    "field": "provider",
+    "description": "Content provider, studio, or brand name.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "StudioX",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.content-season-number",
+    "namespace": "content",
+    "field": "season-number",
+    "description": "Season number (for episodic content).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "1",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.content-title",
+    "namespace": "content",
+    "field": "title",
+    "description": "Content title or program name (e.g. for analytics).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "Sample Show S01E01",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.device-display-type",
+    "namespace": "device",
+    "field": "display-type",
+    "description": "Display panel technology (e.g. LCD, OLED, MicroLED, Mini-LED).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "OLED",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.device-model",
+    "namespace": "device",
+    "field": "model",
+    "description": "Device model name or identifier.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "iPhone14,2",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.device-operating-system-name",
+    "namespace": "device",
+    "field": "operating-system-name",
+    "description": "Operating system name (e.g. iOS, Android, Windows).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "iOS",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.device-operating-system-version",
+    "namespace": "device",
+    "field": "operating-system-version",
+    "description": "Operating system version.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "17.2",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.device-screen-size",
+    "namespace": "device",
+    "field": "screen-size",
+    "description": "Screen resolution or size (e.g. widthxheight in pixels).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "1920x1080",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.device-type",
+    "namespace": "device",
+    "field": "type",
+    "description": "Device category (e.g. mobile, tv, desktop).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "mobile",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.experiment-cohort",
+    "namespace": "experiment",
+    "field": "cohort",
+    "description": "Cohort or variant for this session (e.g. control, treatment-a).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "control",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.experiment-id",
+    "namespace": "experiment",
+    "field": "id",
+    "description": "Identifier of the experiment (e.g. feature flag or A/B test id).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "exp_player_ui_2024",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.experiment-type",
+    "namespace": "experiment",
+    "field": "type",
+    "description": "Type of experiment (e.g. ab, mvt, feature-flag, rollout).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "ab",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.player-autoplay",
+    "namespace": "player",
+    "field": "autoplay",
+    "description": "Whether playback started via autoplay (string, e.g. true or false).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "false",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.player-configuration",
+    "namespace": "player",
+    "field": "configuration",
+    "description": "Player or client configuration identifier or profile name.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "production",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.player-name",
+    "namespace": "player",
+    "field": "name",
+    "description": "Name or identifier of the player/client application.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "my-web-player",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.player-start-trigger",
+    "namespace": "player",
+    "field": "start-trigger",
+    "description": "How playback was started (e.g. user-click, autoplay, deep-link).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "user-click",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.player-version",
+    "namespace": "player",
+    "field": "version",
+    "description": "Player or client application version.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "2.1.0",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.user-id",
+    "namespace": "user",
+    "field": "id",
+    "description": "Anonymous or hashed user/session identifier (avoid PII).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "usr_abc123",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.utm-campaign",
+    "namespace": "utm",
+    "field": "campaign",
+    "description": "UTM campaign parameter for attribution.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "summer_promo",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.utm-content",
+    "namespace": "utm",
+    "field": "content",
+    "description": "UTM content parameter for attribution.",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "banner_a",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.utm-medium",
+    "namespace": "utm",
+    "field": "medium",
+    "description": "UTM medium parameter for attribution (e.g. email, cpc).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "email",
+    "added": "2026-03-09"
+  },
+  {
+    "key": "org.svta.utm-source",
+    "namespace": "utm",
+    "field": "source",
+    "description": "UTM source parameter for attribution (e.g. newsletter, google).",
+    "valueType": "string",
+    "headerName": "CMCD-Session",
+    "example": "newsletter",
+    "added": "2026-03-09"
+  }
+]
