@@ -19,21 +19,34 @@ function esc(s) {
   return String(s).replace(/\|/g, '\\|').trim();
 }
 
+/** Format example as full CMCD key=value. String: key="value" (quotes/backslashes escaped). Token: key=value (no quotes). */
+function formatExample(entry) {
+  const key = entry.keyName;
+  const raw = entry.example;
+  if (key == null || raw == null) return '';
+  const val = String(raw);
+  if (entry.typeAndUnit === 'string') {
+    const escaped = val.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+    return `${key}="${escaped}"`;
+  }
+  return `${key}=${val}`;
+}
+
 function tableRow(entry) {
   return [
-    esc(entry.key),
-    esc(entry.namespace || ''),
-    esc(entry.field || ''),
+    esc(entry.keyName),
+    esc(entry.namespaceDescription || ''),
     esc(entry.description),
-    esc(entry.valueType),
+    esc(entry.valueDefinition),
+    esc(entry.typeAndUnit),
     esc(entry.headerName),
-    esc(entry.example ?? ''),
+    esc(formatExample(entry)),
     esc(entry.added),
   ].join(' | ');
 }
 
 function renderTable(entries) {
-  const header = '| Key | Namespace | Field | Description | Value type | Header name | Example | Added |';
+  const header = '| Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |';
   const separator = '| --- | --- | --- | --- | --- | --- | --- | --- |';
   const rows = entries.map(tableRow).map((r) => '| ' + r + ' |');
   return [header, separator, ...rows].join('\n');
@@ -47,7 +60,7 @@ const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
 
 const byNamespace = {};
 for (const entry of registry) {
-  const ns = entry.namespace || 'other';
+  const ns = entry.namespaceDescription || 'other';
   if (!byNamespace[ns]) byNamespace[ns] = [];
   byNamespace[ns].push(entry);
 }
@@ -55,7 +68,7 @@ for (const entry of registry) {
 const namespaces = Object.keys(byNamespace).sort();
 
 const sections = namespaces.map((ns) => {
-  const entries = byNamespace[ns].sort((a, b) => a.key.localeCompare(b.key));
+  const entries = byNamespace[ns].sort((a, b) => (a.keyName || '').localeCompare(b.keyName || ''));
   const title = `### ${namespaceLabel(ns)}`;
   const table = renderTable(entries);
   return title + '\n\n' + table;

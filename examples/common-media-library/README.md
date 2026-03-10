@@ -10,15 +10,15 @@ npm install @svta/common-media-library
 
 ## Registry keys used
 
-The example uses these keys from the registry (see [key schema](../../docs/key-schema.md)):
+The example uses these keys from the registry (see [key schema](../../docs/key-schema.md)). Keys use abbreviations (Key name); Description is the human-readable field meaning:
 
-| Key                         | Description           | Example value   |
-| --------------------------- | --------------------- | --------------- |
-| `org.svta.player-name`      | Player/client name    | `my-web-player` |
-| `org.svta.device-type`      | Device category       | `mobile`        |
-| `org.svta.content-genre`    | Content genre         | `movie`         |
-| `org.svta.experiment-cohort`| Experiment cohort     | `control`       |
-| `org.svta.utm-source`       | UTM source (attribution) | `newsletter`  |
+| Key name          | Description (field) | Example value   |
+| ----------------- | ------------------- | --------------- |
+| `org.svta.p-n`    | name (player)       | `my-web-player` |
+| `org.svta.d-t`    | type (device)       | `mobile`        |
+| `org.svta.co-g`   | genre (content)     | `movie`         |
+| `org.svta.e-c`    | cohort (experiment) | `control`       |
+| `org.svta.um-s`   | source (utm)        | `newsletter`    |
 
 ## Building a CMCD payload with custom keys
 
@@ -35,12 +35,12 @@ const cmcd = {
   d: 324.69,
   ot: CmcdObjectType.MANIFEST,
 
-  // Registry custom keys (from keys/registry.json)
-  ['org.svta.player-name']: 'my-web-player',
-  ['org.svta.device-type']: 'mobile',
-  ['org.svta.content-genre']: 'movie',
-  ['org.svta.experiment-cohort']: 'control',
-  ['org.svta.utm-source']: 'newsletter',
+  // Registry custom keys (abbreviated key names from keys/registry.json)
+  ['org.svta.p-n']: 'my-web-player',
+  ['org.svta.d-t']: 'mobile',
+  ['org.svta.co-g']: 'movie',
+  ['org.svta.e-c']: 'control',
+  ['org.svta.um-s']: 'newsletter',
 };
 
 const url = 'https://example.com/playlist.m3u8';

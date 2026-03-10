@@ -14,11 +14,11 @@ const cmcd = {
   cid: 'cc002fc3-d9e1-418d-9a5f-3d0eac601882',
   d: 324.69,
   ot: CmcdObjectType.MANIFEST,
-  ['org.svta.player-name']: 'my-web-player',
-  ['org.svta.device-type']: 'mobile',
-  ['org.svta.content-genre']: 'movie',
-  ['org.svta.experiment-cohort']: 'control',
-  ['org.svta.utm-source']: 'newsletter',
+  ['org.svta.p-n']: 'my-web-player',
+  ['org.svta.d-t']: 'mobile',
+  ['org.svta.co-g']: 'movie',
+  ['org.svta.e-c']: 'control',
+  ['org.svta.um-s']: 'newsletter',
 };
 
 const url = 'https://example.com/playlist.m3u8';

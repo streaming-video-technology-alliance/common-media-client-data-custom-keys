@@ -4,83 +4,83 @@ This page is an overview of all registered custom keys. It is generated from the
 
 ### Accessibility keys
 
-| Key | Namespace | Field | Description | Value type | Header name | Example | Added |
+| Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| org.svta.accessibility-audio-description | accessibility | audio-description | Whether audio description is enabled (e.g. true, false). | string | CMCD-Status | false | 2026-03-09 |
-| org.svta.accessibility-captions | accessibility | captions | Whether captions/subtitles are enabled (e.g. true, false). | string | CMCD-Status | true | 2026-03-09 |
+| org.svta.a-ad | accessibility | audio-description | Whether audio description is enabled. Possible values: true / false. | string | CMCD-Status | org.svta.a-ad="false" | 2026-03-09 |
+| org.svta.a-c | accessibility | captions | Whether captions/subtitles are enabled. Possible values: true / false. | string | CMCD-Status | org.svta.a-c="true" | 2026-03-09 |
 
 ### Application keys
 
-| Key | Namespace | Field | Description | Value type | Header name | Example | Added |
+| Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| org.svta.application-configuration | application | configuration | Application configuration or environment identifier. | string | CMCD-Session | production | 2026-03-09 |
-| org.svta.application-domain | application | domain | Domain or origin from which the application is served. | string | CMCD-Session | app.example.com | 2026-03-09 |
-| org.svta.application-name | application | name | Application or site name. | string | CMCD-Session | MyStreamingApp | 2026-03-09 |
-| org.svta.application-type | application | type | Application type (e.g. web, native, embedded). | string | CMCD-Session | web | 2026-03-09 |
-| org.svta.application-version | application | version | Application version. | string | CMCD-Session | 3.0.1 | 2026-03-09 |
+| org.svta.ap-c | application | configuration | Application configuration or environment identifier. | string | CMCD-Session | org.svta.ap-c="production" | 2026-03-09 |
+| org.svta.ap-d | application | domain | Domain or origin from which the application is served. | string | CMCD-Session | org.svta.ap-d="app.example.com" | 2026-03-09 |
+| org.svta.ap-n | application | name | Application or site name. | string | CMCD-Session | org.svta.ap-n="MyStreamingApp" | 2026-03-09 |
+| org.svta.ap-t | application | type | Application type (e.g. web, native, embedded). | string | CMCD-Session | org.svta.ap-t="web" | 2026-03-09 |
+| org.svta.ap-v | application | version | Application version. | string | CMCD-Session | org.svta.ap-v="3.0.1" | 2026-03-09 |
 
 ### Connection keys
 
-| Key | Namespace | Field | Description | Value type | Header name | Example | Added |
+| Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| org.svta.connection-strength | connection | strength | Connection strength or quality indicator. | string | CMCD-Status | good | 2026-03-09 |
-| org.svta.connection-type | connection | type | Network connection type (e.g. wifi, mobile, fixed, ethernet). | string | CMCD-Status | wifi | 2026-03-09 |
+| org.svta.c-s | connection | strength | Connection strength or quality indicator. | string | CMCD-Status | org.svta.c-s="good" | 2026-03-09 |
+| org.svta.c-t | connection | type | Network connection type (e.g. wifi, mobile, fixed, ethernet). | string | CMCD-Status | org.svta.c-t="wifi" | 2026-03-09 |
 
 ### Content keys
 
-| Key | Namespace | Field | Description | Value type | Header name | Example | Added |
+| Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| org.svta.content-age-rating | content | age-rating | Age classification of content (e.g. 12+, 18+). | string | CMCD-Session | 12+ | 2026-03-09 |
-| org.svta.content-episode-number | content | episode-number | Episode number within a season (for episodic content). | string | CMCD-Session | 3 | 2026-03-09 |
-| org.svta.content-genre | content | genre | Content genre or category (e.g. movie, news, sports). | string | CMCD-Session | movie | 2026-03-09 |
-| org.svta.content-language | content | language | Content language code (e.g. en, de). | string | CMCD-Session | en | 2026-03-09 |
-| org.svta.content-provider | content | provider | Content provider, studio, or brand name. | string | CMCD-Session | StudioX | 2026-03-09 |
-| org.svta.content-season-number | content | season-number | Season number (for episodic content). | string | CMCD-Session | 1 | 2026-03-09 |
-| org.svta.content-title | content | title | Content title or program name (e.g. for analytics). | string | CMCD-Session | Sample Show S01E01 | 2026-03-09 |
+| org.svta.co-ar | content | age-rating | Age classification of content (e.g. 12+, 18+). | string | CMCD-Session | org.svta.co-ar="12+" | 2026-03-09 |
+| org.svta.co-en | content | episode-number | Episode number within a season (for episodic content). | string | CMCD-Session | org.svta.co-en="3" | 2026-03-09 |
+| org.svta.co-g | content | genre | Content genre or category (e.g. movie, news, sports). | string | CMCD-Session | org.svta.co-g="movie" | 2026-03-09 |
+| org.svta.co-l | content | language | Content language code (e.g. en, de). | string | CMCD-Session | org.svta.co-l="en" | 2026-03-09 |
+| org.svta.co-p | content | provider | Content provider, studio, or brand name. | string | CMCD-Session | org.svta.co-p="StudioX" | 2026-03-09 |
+| org.svta.co-sn | content | season-number | Season number (for episodic content). | string | CMCD-Session | org.svta.co-sn="1" | 2026-03-09 |
+| org.svta.co-t | content | title | Content title or program name (e.g. for analytics). | string | CMCD-Session | org.svta.co-t="Sample Show S01E01" | 2026-03-09 |
 
 ### Device keys
 
-| Key | Namespace | Field | Description | Value type | Header name | Example | Added |
+| Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| org.svta.device-display-type | device | display-type | Display panel technology (e.g. LCD, OLED, MicroLED, Mini-LED). | string | CMCD-Session | OLED | 2026-03-09 |
-| org.svta.device-model | device | model | Device model name or identifier. | string | CMCD-Session | iPhone14,2 | 2026-03-09 |
-| org.svta.device-operating-system-name | device | operating-system-name | Operating system name (e.g. iOS, Android, Windows). | string | CMCD-Session | iOS | 2026-03-09 |
-| org.svta.device-operating-system-version | device | operating-system-version | Operating system version. | string | CMCD-Session | 17.2 | 2026-03-09 |
-| org.svta.device-screen-size | device | screen-size | Screen resolution or size (e.g. widthxheight in pixels). | string | CMCD-Session | 1920x1080 | 2026-03-09 |
-| org.svta.device-type | device | type | Device category (e.g. mobile, tv, desktop). | string | CMCD-Session | mobile | 2026-03-09 |
+| org.svta.d-dt | device | display-type | Display panel technology (e.g. LCD, OLED, MicroLED, Mini-LED). | string | CMCD-Session | org.svta.d-dt="OLED" | 2026-03-09 |
+| org.svta.d-m | device | model | Device model name or identifier. | string | CMCD-Session | org.svta.d-m="iPhone14,2" | 2026-03-09 |
+| org.svta.d-osn | device | operating-system-name | Operating system name (e.g. iOS, Android, Windows). | string | CMCD-Session | org.svta.d-osn="iOS" | 2026-03-09 |
+| org.svta.d-osv | device | operating-system-version | Operating system version. | string | CMCD-Session | org.svta.d-osv="17.2" | 2026-03-09 |
+| org.svta.d-ss | device | screen-size | Screen resolution or size (e.g. widthxheight in pixels). | string | CMCD-Session | org.svta.d-ss="1920x1080" | 2026-03-09 |
+| org.svta.d-t | device | type | Device category (e.g. mobile, tv, desktop). | string | CMCD-Session | org.svta.d-t="mobile" | 2026-03-09 |
 
 ### Experiment keys
 
-| Key | Namespace | Field | Description | Value type | Header name | Example | Added |
+| Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| org.svta.experiment-cohort | experiment | cohort | Cohort or variant for this session (e.g. control, treatment-a). | string | CMCD-Session | control | 2026-03-09 |
-| org.svta.experiment-id | experiment | id | Identifier of the experiment (e.g. feature flag or A/B test id). | string | CMCD-Session | exp_player_ui_2024 | 2026-03-09 |
-| org.svta.experiment-type | experiment | type | Type of experiment (e.g. ab, mvt, feature-flag, rollout). | string | CMCD-Session | ab | 2026-03-09 |
+| org.svta.e-c | experiment | cohort | Cohort or variant for this session (e.g. control, treatment-a). | string | CMCD-Session | org.svta.e-c="control" | 2026-03-09 |
+| org.svta.e-i | experiment | id | Identifier of the experiment (e.g. feature flag or A/B test id). | string | CMCD-Session | org.svta.e-i="exp_player_ui_2024" | 2026-03-09 |
+| org.svta.e-t | experiment | type | Type of experiment (e.g. ab, mvt, feature-flag, rollout). | string | CMCD-Session | org.svta.e-t="ab" | 2026-03-09 |
 
 ### Player keys
 
-| Key | Namespace | Field | Description | Value type | Header name | Example | Added |
+| Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| org.svta.player-autoplay | player | autoplay | Whether playback started via autoplay (string, e.g. true or false). | string | CMCD-Session | false | 2026-03-09 |
-| org.svta.player-configuration | player | configuration | Player or client configuration identifier or profile name. | string | CMCD-Session | production | 2026-03-09 |
-| org.svta.player-name | player | name | Name or identifier of the player/client application. | string | CMCD-Session | my-web-player | 2026-03-09 |
-| org.svta.player-start-trigger | player | start-trigger | How playback was started (e.g. user-click, autoplay, deep-link). | string | CMCD-Session | user-click | 2026-03-09 |
-| org.svta.player-version | player | version | Player or client application version. | string | CMCD-Session | 2.1.0 | 2026-03-09 |
+| org.svta.p-a | player | autoplay | Whether playback started via autoplay. Possible values: true / false. | string | CMCD-Session | org.svta.p-a="false" | 2026-03-09 |
+| org.svta.p-c | player | configuration | Player or client configuration identifier or profile name. | string | CMCD-Session | org.svta.p-c="production" | 2026-03-09 |
+| org.svta.p-n | player | name | Name or identifier of the player/client application. | string | CMCD-Session | org.svta.p-n="my-web-player" | 2026-03-09 |
+| org.svta.p-st | player | start-trigger | How playback was started (e.g. user-click, autoplay, deep-link). | string | CMCD-Session | org.svta.p-st="user-click" | 2026-03-09 |
+| org.svta.p-v | player | version | Player or client application version. | string | CMCD-Session | org.svta.p-v="2.1.0" | 2026-03-09 |
 
 ### User keys
 
-| Key | Namespace | Field | Description | Value type | Header name | Example | Added |
+| Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| org.svta.user-id | user | id | Anonymous or hashed user/session identifier (avoid PII). | string | CMCD-Session | usr_abc123 | 2026-03-09 |
+| org.svta.u-i | user | id | Anonymous or hashed user/session identifier (avoid PII). | string | CMCD-Session | org.svta.u-i="usr_abc123" | 2026-03-09 |
 
 ### Utm keys
 
-| Key | Namespace | Field | Description | Value type | Header name | Example | Added |
+| Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| org.svta.utm-campaign | utm | campaign | UTM campaign parameter for attribution. | string | CMCD-Session | summer_promo | 2026-03-09 |
-| org.svta.utm-content | utm | content | UTM content parameter for attribution. | string | CMCD-Session | banner_a | 2026-03-09 |
-| org.svta.utm-medium | utm | medium | UTM medium parameter for attribution (e.g. email, cpc). | string | CMCD-Session | email | 2026-03-09 |
-| org.svta.utm-source | utm | source | UTM source parameter for attribution (e.g. newsletter, google). | string | CMCD-Session | newsletter | 2026-03-09 |
+| org.svta.um-c | utm | campaign | UTM campaign parameter for attribution. | string | CMCD-Session | org.svta.um-c="summer_promo" | 2026-03-09 |
+| org.svta.um-co | utm | content | UTM content parameter for attribution. | string | CMCD-Session | org.svta.um-co="banner_a" | 2026-03-09 |
+| org.svta.um-m | utm | medium | UTM medium parameter for attribution (e.g. email, cpc). | string | CMCD-Session | org.svta.um-m="email" | 2026-03-09 |
+| org.svta.um-s | utm | source | UTM source parameter for attribution (e.g. newsletter, google). | string | CMCD-Session | org.svta.um-s="newsletter" | 2026-03-09 |
 
 ---
 

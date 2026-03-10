@@ -8,13 +8,19 @@ assignees: ''
 
 ## Proposed key
 
-**Full key name:** (e.g. `org.svta.player-name`. Must follow `<reverseDNS>.<namespace>-<field>`; namespace = alphanumeric only, no hyphens; field = hyphen-separated words. Both namespace and field are required.)
+**Key name (full):** (e.g. `org.svta.p-n`. Format: `<reverseDNS>.<namespaceAbbr>-<fieldAbbr>`. Abbreviations are alphanumeric only; one hyphen between namespace and field.)
 
-## Description
+**keyNameAbbr:** (Abbreviation suffix only, e.g. `p-n`. Must be unique. See [key schema](docs/key-schema.md) for rules: as short as possible; multi-word = first char of each word; uniqueness within namespace.)
 
-(Short, clear purpose of the key.)
+**namespaceDescription:** (Human-readable namespace, e.g. `player`.)
 
-## Value type
+**description (field):** (Human-readable field meaning, e.g. `name`.)
+
+## Value definition
+
+(Short purpose/definition of the key – CMCD "Value definition".)
+
+## Type & Unit
 
 (Per CMCD spec: custom keys MUST be STRING or TOKEN; value max 64 characters.)
 
@@ -32,7 +38,7 @@ assignees: ''
 
 ## Example value
 
-(Optional example, e.g. `my-web-player` or `2.1.0`.)
+(Optional example, max 64 characters, e.g. `my-web-player` or `2.1.0`.)
 
 ## Use case
 
@@ -40,7 +46,7 @@ assignees: ''
 
 ## Checklist
 
-- [ ] Key name uses reverse-DNS prefix and has both namespace and field (namespace-only not allowed).
-- [ ] Namespace contains only lowercase letters and digits (no hyphens, no dots, no special characters).
-- [ ] Field contains only lowercase letters, digits, and hyphens (no dots or other special characters).
-- [ ] I have read the [key schema](docs/key-schema.md).
+- [ ] Key name uses reverse-DNS prefix and abbreviated namespace and field (format: `org.svta.<nsAbbr>-<fieldAbbr>`).
+- [ ] Namespace and field abbreviations are alphanumeric only; no hyphens inside abbreviations.
+- [ ] Namespace abbreviation is unique in the registry; field abbreviation is unique within the namespace.
+- [ ] I have read the [key schema](docs/key-schema.md) (abbreviation rules and registry entry shape).
