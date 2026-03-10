@@ -49,16 +49,6 @@ console.log(urlWithCmcd);
 // CMCD query string will include the custom keys in the same way as standard keys
 ```
 
-## Running the example script
-
-From the repo root (or from this directory if you install dependencies here):
-
-```bash
-node append-cmcd-example.js
-```
-
-The script builds a sample URL with `appendCmcdQuery` including the registry custom keys and prints the result.
-
 ## References
 
 - [CMCDv2 specification (CTA-5004-A)](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html) – Common Media Client Data definition
