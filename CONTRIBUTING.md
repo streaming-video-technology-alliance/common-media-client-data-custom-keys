@@ -4,7 +4,7 @@ This repository is an **informal** registry for custom keys used with the [CMCDv
 
 ## How to propose a new key
 
-1. **Open an issue** using the [Propose a custom key](.github/ISSUE_TEMPLATE/propose-custom-key.md) template.  
+1. **Open an issue** using the [Propose a custom key](https://github.com/streaming-video-technology-alliance/common-media-client-data-custom-keys/issues/new?template=propose-custom-key.md) template.  
    Provide: key name (full keyName, e.g. `org.svta-p-n`), keyNameAbbr (abbreviation suffix, e.g. `p-n`), description (field meaning), namespaceDescription, value definition (purpose text), type and unit (string or token; value max 64 characters per CMCD spec), header name ([CTA-5004-A Section 3.1](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html#header-field-definition): CMCD-Session, CMCD-Request, CMCD-Object, or CMCD-Status), example, and use case.
 
 2. **Review.** Maintainers will check:

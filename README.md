@@ -29,7 +29,7 @@ We have a small [integration example](examples/common-media-library/) showing ho
 
 ## Proposing a new key
 
-Have an idea for a key that would help the community? Open a GitHub issue using the **[“Propose a custom key”](.github/ISSUE_TEMPLATE/propose-custom-key.md)** template. Describe the key, its purpose, and an example value. After review, accepted keys are added to the registry. The full process and rules are in [CONTRIBUTING.md](CONTRIBUTING.md).
+Have an idea for a key that would help the community? Open a GitHub issue using the **[“Propose a custom key”](https://github.com/streaming-video-technology-alliance/common-media-client-data-custom-keys/issues/new?template=propose-custom-key.md)** template. Describe the key, its purpose, and an example value. After review, accepted keys are added to the registry. The full process and rules are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
