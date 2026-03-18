@@ -1,5 +1,7 @@
 # Common Media Client Data: Custom Keys Registry
 
+**Registry version:** 1.0.0
+
 A shared, informal registry of **custom keys** for the [CMCDv2](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html) specification (CTA-5004-A). If you’re using CMCD in any player environment and want to use additional information in a well-defined manner, this repo gives you a consistent naming scheme and a curated list of keys you can use and contribute to.
 
 ---

@@ -13,7 +13,7 @@ This repository is an **informal** registry for custom keys used with the [CMCDv
    - Clarity and no overlap with existing or standard CMCD keys.
    - Consistency with the [key schema](docs/key-schema.md).
 
-3. **Acceptance.** Once accepted, a maintainer adds the key to [keys/registry.json](keys/registry.json), runs `node scripts/generate-keys-readme.js` to regenerate [keys/README.md](keys/README.md), and closes the issue. You may be asked to open a PR for the edit; the issue number will be referenced.
+3. **Acceptance.** Once accepted, a maintainer adds the key to [keys/registry.json](keys/registry.json), bumps the registry version (see [Versioning](#versioning)), runs `node scripts/generate-keys-readme.js` to regenerate [keys/README.md](keys/README.md), and closes the issue. You may be asked to open a PR for the edit; the issue number will be referenced.
 
 ## Key schema and validation
 
@@ -24,3 +24,13 @@ This repository is an **informal** registry for custom keys used with the [CMCDv
 
 - Only keys that have been **accepted by the chairs** after review are added.
 - Follow the schema and naming rules in [docs/key-schema.md](docs/key-schema.md).
+
+## Versioning
+
+The registry uses [semantic versioning](https://semver.org/) (`major.minor.patch`). The version is stored in the `version` field of [keys/registry.json](keys/registry.json).
+
+- **Patch** (e.g. 1.0.0 -> 1.0.1): description fixes, example updates, typos.
+- **Minor** (e.g. 1.0.0 -> 1.1.0): new keys added, keys removed or renamed.
+- **Major** (e.g. 1.0.0 -> 2.0.0): breaking changes to the registry schema shape (e.g. property renames, structural changes that break consumers).
+
+Maintainers bump the version when merging changes. Contributors do not need to bump it themselves. When the version in `keys/registry.json` is updated, the version line in [README.md](README.md) must be updated to match.
