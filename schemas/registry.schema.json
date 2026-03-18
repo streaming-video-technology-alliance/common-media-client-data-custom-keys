@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/StreamingVideoTechnologyAlliance/common-media-client-data-custom-keys/schemas/registry.schema.json",
+  "title": "CMCDv2 Custom Keys Registry",
+  "description": "Schema for the machine-readable list of registered CMCDv2 custom keys. Property names align with CMCD spec Table 1 (lowercase-first camelCase).",
+  "type": "object",
+  "required": ["version", "keys"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Registry version (semver). Minor = new keys, patch = description fixes, major = breaking changes.",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "keys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["keyName", "keyNameAbbr", "description", "namespaceDescription", "valueDefinition", "typeAndUnit", "headerName", "added"],
+        "additionalProperties": false,
+        "properties": {
+          "keyName": {
+            "type": "string",
+            "description": "Full key for transmission (Key Name per CMCD spec), e.g. org.svta-a-ad.",
+            "pattern": "^[a-z0-9]+(\\.[a-z0-9]+)+-[a-z0-9]+-[a-z0-9]+$"
+          },
+          "keyNameAbbr": {
+            "type": "string",
+            "description": "Abbreviation suffix only, e.g. a-ad. Pattern: namespaceAbbr-fieldAbbr.",
+            "pattern": "^[a-z0-9]+-[a-z0-9]+$"
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable field meaning (Description per CMCD spec), e.g. audio-description."
+          },
+          "namespaceDescription": {
+            "type": "string",
+            "description": "Human-readable namespace, e.g. accessibility."
+          },
+          "valueDefinition": {
+            "type": "string",
+            "description": "Short purpose/definition of the key (Value definition per CMCD spec)."
+          },
+          "typeAndUnit": {
+            "type": "string",
+            "enum": ["string", "token"],
+            "description": "Value type (Type & Unit per CMCD spec). Custom keys MUST be string or token; values max 64 characters."
+          },
+          "headerName": {
+            "type": "string",
+            "enum": ["CMCD-Object", "CMCD-Request", "CMCD-Session", "CMCD-Status"],
+            "description": "Header name per CTA-5004-A Section 3.1 (Header field definition)."
+          },
+          "example": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "Optional example value (max 64 characters per CMCD spec)."
+          },
+          "added": {
+            "type": "string",
+            "format": "date",
+            "description": "Date the key was added to the registry (YYYY-MM-DD)."
+          },
+          "source": {
+            "type": "string",
+            "format": "uri-reference",
+            "description": "Optional link to the GitHub issue or discussion."
+          }
+        }
+      }
+    }
+  }
+}
