@@ -14,11 +14,11 @@ The example uses these keys from the registry (see [key schema](../../docs/key-s
 
 | Key name          | Description (field) | Example value   |
 | ----------------- | ------------------- | --------------- |
-| `org.svta.p-n`    | name (player)       | `my-web-player` |
-| `org.svta.d-t`    | type (device)       | `mobile`        |
-| `org.svta.co-g`   | genre (content)     | `movie`         |
-| `org.svta.e-c`    | cohort (experiment) | `control`       |
-| `org.svta.um-s`   | source (utm)        | `newsletter`    |
+| `org.svta-p-n`    | name (player)       | `my-web-player` |
+| `org.svta-d-t`    | type (device)       | `mobile`        |
+| `org.svta-co-g`   | genre (content)     | `movie`         |
+| `org.svta-e-c`    | cohort (experiment) | `control`       |
+| `org.svta-um-s`   | source (utm)        | `newsletter`    |
 
 ## Building a CMCD payload with custom keys
 
@@ -36,11 +36,11 @@ const cmcd = {
   ot: CmcdObjectType.MANIFEST,
 
   // Registry custom keys (abbreviated key names from keys/registry.json)
-  ['org.svta.p-n']: 'my-web-player',
-  ['org.svta.d-t']: 'mobile',
-  ['org.svta.co-g']: 'movie',
-  ['org.svta.e-c']: 'control',
-  ['org.svta.um-s']: 'newsletter',
+  ['org.svta-p-n']: 'my-web-player',
+  ['org.svta-d-t']: 'mobile',
+  ['org.svta-co-g']: 'movie',
+  ['org.svta-e-c']: 'control',
+  ['org.svta-um-s']: 'newsletter',
 };
 
 const url = 'https://example.com/playlist.m3u8';

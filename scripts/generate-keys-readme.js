@@ -56,7 +56,8 @@ function namespaceLabel(ns) {
   return ns.charAt(0).toUpperCase() + ns.slice(1) + ' keys';
 }
 
-const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+const registryData = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+const registry = registryData.keys;
 
 const byNamespace = {};
 for (const entry of registry) {

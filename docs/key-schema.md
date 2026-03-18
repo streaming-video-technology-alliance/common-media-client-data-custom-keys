@@ -6,14 +6,14 @@ Per the CMCD specification: custom key names **MUST** carry a hyphenated prefix 
 
 ## Key format
 
-**Pattern:** `<reverseDNS>.<namespaceAbbr>-<fieldAbbr>`
+**Pattern:** `<reverseDNS>-<namespaceAbbr>-<fieldAbbr>`
 
-- **reverseDNS:** Authority prefix (e.g. `org.svta`, `com.example`). Uses dots (`.`) to separate segments.
+- **reverseDNS:** Authority prefix (e.g. `org.svta`, `com.example`). Uses dots (`.`) to separate internal segments. A **hyphen** joins the prefix to the key suffix (as required by the CMCD spec's "hyphenated prefix" rule).
 - **namespaceAbbr:** Abbreviated namespace (alphanumeric only). Unique across the registry.
 - **fieldAbbr:** Abbreviated field (alphanumeric only). Unique **within the namespace**.
-- The only hyphen in the suffix is between namespace and field; no hyphens inside either abbreviation.
+- The hyphens in the suffix separate reverse-DNS from namespace, and namespace from field; no hyphens inside either abbreviation.
 
-**Example:** `org.svta.a-ad` (accessibility – audio-description), `org.svta.p-n` (player – name).
+**Example:** `org.svta-a-ad` (accessibility: audio-description), `org.svta-p-n` (player: name).
 
 ## Abbreviation rules
 
@@ -24,7 +24,7 @@ Per the CMCD specification: custom key names **MUST** carry a hyphenated prefix 
 
 ## Allowed characters
 
-- **Namespace and field abbreviations:** Lowercase letters (`a-z`) and digits (`0-9`) only. No hyphens inside an abbreviation; the single hyphen between `namespaceAbbr` and `fieldAbbr` is the only one in the key suffix.
+- **Namespace and field abbreviations:** Lowercase letters (`a-z`) and digits (`0-9`) only. No hyphens inside an abbreviation; hyphens only appear as separators between the reverse-DNS prefix, the namespace abbreviation, and the field abbreviation.
 
 ## Value type and header name
 
@@ -36,17 +36,17 @@ Per the CMCD specification: custom key names **MUST** carry a hyphenated prefix 
 
 | Key name (keyName)   | Namespace (description) | Field (description) |
 | -------------------- | ---------------------- | ------------------- |
-| `org.svta.p-n`       | player                 | name                |
-| `org.svta.d-t`       | device                 | type                |
-| `org.svta.co-g`      | content                | genre               |
-| `org.svta.e-c`       | experiment             | cohort              |
-| `org.svta.um-s`      | utm                    | source              |
+| `org.svta-p-n`       | player                 | name                |
+| `org.svta-d-t`       | device                 | type                |
+| `org.svta-co-g`      | content                | genre               |
+| `org.svta-e-c`       | experiment             | cohort              |
+| `org.svta-um-s`      | utm                    | source              |
 
 ## Registry entry shape
 
 Each key in the registry (e.g. in `keys/registry.json`) is an object. Property names align with [CMCD spec Table 1](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html#header-field-definition) (lowercase-first camelCase in JSON):
 
-- **keyName** (required): Full key for transmission (Key Name per CMCD spec), e.g. `org.svta.a-ad`.
+- **keyName** (required): Full key for transmission (Key Name per CMCD spec), e.g. `org.svta-a-ad`.
 - **keyNameAbbr** (required): Abbreviation suffix only, e.g. `a-ad` (namespaceAbbr-fieldAbbr).
 - **description** (required): Human-readable field meaning (Description per CMCD spec), e.g. `audio-description`.
 - **namespaceDescription** (required): Human-readable namespace, e.g. `accessibility`.
@@ -57,4 +57,4 @@ Each key in the registry (e.g. in `keys/registry.json`) is an object. Property n
 - **added** (required): Date added (YYYY-MM-DD).
 - **source** (optional): Link to issue or discussion.
 
-The registry file must validate against `schemas/registry.schema.json`.
+The registry file must validate against `schemas/registry.schema.json`. The registry is a JSON object with a `version` (semver) and a `keys` array.

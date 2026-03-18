@@ -5,10 +5,10 @@ This repository is an **informal** registry for custom keys used with the [CMCDv
 ## How to propose a new key
 
 1. **Open an issue** using the [Propose a custom key](.github/ISSUE_TEMPLATE/propose-custom-key.md) template.  
-   Provide: key name (full keyName, e.g. `org.svta.p-n`), keyNameAbbr (abbreviation suffix, e.g. `p-n`), description (field meaning), namespaceDescription, value definition (purpose text), type and unit (string or token; value max 64 characters per CMCD spec), header name ([CTA-5004-A Section 3.1](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html#header-field-definition): CMCD-Session, CMCD-Request, CMCD-Object, or CMCD-Status), example, and use case.
+   Provide: key name (full keyName, e.g. `org.svta-p-n`), keyNameAbbr (abbreviation suffix, e.g. `p-n`), description (field meaning), namespaceDescription, value definition (purpose text), type and unit (string or token; value max 64 characters per CMCD spec), header name ([CTA-5004-A Section 3.1](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html#header-field-definition): CMCD-Session, CMCD-Request, CMCD-Object, or CMCD-Status), example, and use case.
 
 2. **Review.** Maintainers will check:
-   - **Naming:** Key format is `<reverseDNS>.<namespaceAbbr>-<fieldAbbr>` (abbreviations alphanumeric only; one hyphen between namespace and field). See [key schema](docs/key-schema.md) for abbreviation rules. Namespace abbreviation must be unique globally; field abbreviation must be unique within the namespace.
+   - **Naming:** Key format is `<reverseDNS>-<namespaceAbbr>-<fieldAbbr>` (abbreviations alphanumeric only; hyphens separate reverse-DNS prefix, namespace, and field). See [key schema](docs/key-schema.md) for abbreviation rules. Namespace abbreviation must be unique globally; field abbreviation must be unique within the namespace.
    - **Value type:** Custom keys MUST be STRING or TOKEN only; value max 64 characters (per [CMCD spec](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html)).
    - Clarity and no overlap with existing or standard CMCD keys.
    - Consistency with the [key schema](docs/key-schema.md).

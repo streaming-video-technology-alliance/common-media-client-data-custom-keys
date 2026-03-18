@@ -8,7 +8,7 @@ assignees: ''
 
 ## Proposed key
 
-**Key name (full):** (e.g. `org.svta.p-n`. Format: `<reverseDNS>.<namespaceAbbr>-<fieldAbbr>`. Abbreviations are alphanumeric only; one hyphen between namespace and field.)
+**Key name (full):** (e.g. `org.svta-p-n`. Format: `<reverseDNS>-<namespaceAbbr>-<fieldAbbr>`. Abbreviations are alphanumeric only; hyphens separate reverse-DNS prefix, namespace, and field.)
 
 **keyNameAbbr:** (Abbreviation suffix only, e.g. `p-n`. Must be unique. See [key schema](docs/key-schema.md) for rules: as short as possible; multi-word = first char of each word; uniqueness within namespace.)
 
@@ -46,7 +46,7 @@ assignees: ''
 
 ## Checklist
 
-- [ ] Key name uses reverse-DNS prefix and abbreviated namespace and field (format: `org.svta.<nsAbbr>-<fieldAbbr>`).
+- [ ] Key name uses reverse-DNS prefix and abbreviated namespace and field (format: `org.svta-<nsAbbr>-<fieldAbbr>`).
 - [ ] Namespace and field abbreviations are alphanumeric only; no hyphens inside abbreviations.
 - [ ] Namespace abbreviation is unique in the registry; field abbreviation is unique within the namespace.
 - [ ] I have read the [key schema](docs/key-schema.md) (abbreviation rules and registry entry shape).
