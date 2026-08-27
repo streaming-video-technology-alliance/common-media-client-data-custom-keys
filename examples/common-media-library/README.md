@@ -51,7 +51,7 @@ console.log(urlWithCmcd);
 
 ## References
 
-- [CMCDv2 specification (CTA-5004-A)](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html) – Common Media Client Data definition
+- [CMCDv2 specification (CTA-5004-B)](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-b.html) – Common Media Client Data definition
 - [keys/registry.json](../../keys/registry.json) – full list of registered keys; [keys/README.md](../../keys/README.md) – human-readable list
 - [docs/key-schema.md](../../docs/key-schema.md) – key format and allowed characters
 - [CML npm package](https://www.npmjs.com/package/@svta/common-media-library) – API and usage

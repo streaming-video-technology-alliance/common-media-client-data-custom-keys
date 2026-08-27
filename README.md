@@ -2,7 +2,7 @@
 
 **Registry version:** 1.0.0
 
-A shared, informal registry of **custom keys** for the [CMCDv2](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html) specification (CTA-5004-A). If you’re using CMCD in any player environment and want to use additional information in a well-defined manner, this repo gives you a consistent naming scheme and a curated list of keys you can use and contribute to.
+A shared, informal registry of **custom keys** for the [CMCDv2](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-b.html) specification (CTA-5004-B). If you’re using CMCD in any player environment and want to use additional information in a well-defined manner, this repo gives you a consistent naming scheme and a curated list of keys you can use and contribute to.
 
 ---
 
@@ -36,7 +36,7 @@ Have an idea for a key that would help the community? Open a GitHub issue using 
 ## Reference and tooling
 
 - **[CMCDv1 specification (CTA-5004)](https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5004-final.pdf)** – Common Media Client Data specification (version 1).
-- **[CMCDv2 specification (CTA-5004-A)](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html)** – Common Media Client Data specification (version 2).
+- **[CMCDv2 specification (CTA-5004-B)](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-b.html)** – Common Media Client Data specification (version 2).
 - **[CTA-WAVE (discussion / feedback)](https://github.com/cta-wave/common-media-client-data)** – Where the spec is discussed and evolved.
 - **[Common Media Library](https://github.com/streaming-video-technology-alliance/common-media-library)** – [GitHub](https://github.com/streaming-video-technology-alliance/common-media-library) · [npm](https://www.npmjs.com/package/@svta/common-media-library)
 - **Registry (JSON):** [keys/registry.json](keys/registry.json)  

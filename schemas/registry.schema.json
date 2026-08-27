@@ -49,7 +49,7 @@
           "headerName": {
             "type": "string",
             "enum": ["CMCD-Object", "CMCD-Request", "CMCD-Session", "CMCD-Status"],
-            "description": "Header name per CTA-5004-A Section 3.1 (Header field definition)."
+            "description": "Header name per CTA-5004-B Section 3.1 (Header field definition)."
           },
           "example": {
             "type": "string",

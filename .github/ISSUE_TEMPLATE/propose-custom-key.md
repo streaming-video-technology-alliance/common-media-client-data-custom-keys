@@ -29,7 +29,7 @@ assignees: ''
 
 ## Header name
 
-[Header field name](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html#header-field-definition) per CTA-5004-A Section 3.1:
+[Header field name](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-b.html#header-field-definition) per CTA-5004-B Section 3.1:
 
 - [ ] CMCD-Object (values vary with the object being requested)
 - [ ] CMCD-Request (values vary with each request)

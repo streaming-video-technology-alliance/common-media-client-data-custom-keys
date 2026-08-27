@@ -1,6 +1,6 @@
 # CMCDv2 Custom Key Schema
 
-This document defines how custom keys for the [CMCDv2 specification (CTA-5004-A)](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html) are named and structured in this registry. It aligns with the CMCD spec (abbreviated keys, minimal payload) and with Common Media Library (CML) CMCD practice.
+This document defines how custom keys for the [CMCDv2 specification (CTA-5004-B)](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-b.html) are named and structured in this registry. It aligns with the CMCD spec (abbreviated keys, minimal payload) and with Common Media Library (CML) CMCD practice.
 
 Per the CMCD specification: custom key names **MUST** carry a hyphenated prefix to avoid namespace collision; players **SHOULD** use reverse-DNS syntax. Custom keys **MUST** have a value type of **STRING or TOKEN** and a **maximum character count of 64** for the value. **This registry is the source of truth** for the meaning of each key (like the CMCD spec for reserved keys).
 
@@ -30,7 +30,7 @@ Per the CMCD specification: custom key names **MUST** carry a hyphenated prefix 
 
 - **typeAndUnit** (registry): **STRING or TOKEN** only; in the registry we use `string` or `token`. Both imply values compliant with RFC 8941 Structured Field Values.
 - **Maximum value length:** Custom key values **MUST** be at most **64 characters** (per CMCD specification).
-- **headerName:** The [header name](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html#header-field-definition) (CTA-5004-A Section 3.1) under which the key is sent: `CMCD-Object`, `CMCD-Request`, `CMCD-Session`, or `CMCD-Status`.
+- **headerName:** The [header name](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-b.html#header-field-definition) (CTA-5004-B Section 3.1) under which the key is sent: `CMCD-Object`, `CMCD-Request`, `CMCD-Session`, or `CMCD-Status`.
 
 ## Examples
 
@@ -44,7 +44,7 @@ Per the CMCD specification: custom key names **MUST** carry a hyphenated prefix 
 
 ## Registry entry shape
 
-Each key in the registry (e.g. in `keys/registry.json`) is an object. Property names align with [CMCD spec Table 1](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html#header-field-definition) (lowercase-first camelCase in JSON):
+Each key in the registry (e.g. in `keys/registry.json`) is an object. Property names align with [CMCD spec Table 1](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-b.html#header-field-definition) (lowercase-first camelCase in JSON):
 
 - **keyName** (required): Full key for transmission (Key Name per CMCD spec), e.g. `org.svta-a-ad`.
 - **keyNameAbbr** (required): Abbreviation suffix only, e.g. `a-ad` (namespaceAbbr-fieldAbbr).
@@ -52,7 +52,7 @@ Each key in the registry (e.g. in `keys/registry.json`) is an object. Property n
 - **namespaceDescription** (required): Human-readable namespace, e.g. `accessibility`.
 - **valueDefinition** (required): Short purpose/definition of the key (Value definition per CMCD spec).
 - **typeAndUnit** (required): `string` or `token` (Type & Unit per CMCD spec). Values max 64 characters.
-- **headerName** (required): Header name per spec: `CMCD-Object`, `CMCD-Request`, `CMCD-Session`, or `CMCD-Status` (see [spec Section 3.1](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-a.html#header-field-definition)).
+- **headerName** (required): Header name per spec: `CMCD-Object`, `CMCD-Request`, `CMCD-Session`, or `CMCD-Status` (see [spec Section 3.1](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-b.html#header-field-definition)).
 - **example** (optional): Example value (must be ≤64 characters).
 - **added** (required): Date added (YYYY-MM-DD).
 - **source** (optional): Link to issue or discussion.
