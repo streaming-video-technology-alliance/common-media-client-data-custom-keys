@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keys": [
     {
       "keyName": "org.svta-a-ad",
@@ -336,7 +336,7 @@
       "keyNameAbbr": "u-i",
       "description": "id",
       "namespaceDescription": "user",
-      "valueDefinition": "Anonymous or hashed user/session identifier (avoid PII).",
+      "valueDefinition": "Anonymous or hashed user identifier (avoid PII).",
       "typeAndUnit": "string",
       "headerName": "CMCD-Session",
       "example": "usr_abc123",

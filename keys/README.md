@@ -71,7 +71,7 @@ This page is an overview of all registered custom keys. It is generated from the
 
 | Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| org.svta-u-i | user | id | Anonymous or hashed user/session identifier (avoid PII). | string | CMCD-Session | org.svta-u-i="usr_abc123" | 2026-03-09 |
+| org.svta-u-i | user | id | Anonymous or hashed user identifier (avoid PII). | string | CMCD-Session | org.svta-u-i="usr_abc123" | 2026-03-09 |
 
 ### Utm keys
 
