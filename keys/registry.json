@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "keys": [
     {
       "keyName": "org.svta-a-ad",
@@ -55,6 +55,18 @@
       "headerName": "CMCD-Session",
       "example": "MyStreamingApp",
       "added": "2026-03-09"
+    },
+    {
+      "keyName": "org.svta-ap-si",
+      "keyNameAbbr": "ap-si",
+      "description": "session-id",
+      "namespaceDescription": "application",
+      "valueDefinition": "Identifier of the application session in which the playback occurs. The application session covers all user and application activity between session start and end (typically ended by inactivity or timeout) and may contain zero or more CMCD playback sessions. Aligned with the [OpenTelemetry session.id](https://opentelemetry.io/docs/specs/semconv/general/session/) semantic convention. This key is distinct from the CMCD sid (single playback session), is not a player-level parent session ID (main asset plus ads/interstitials), and is not a user identifier (see org.svta-u-i).",
+      "typeAndUnit": "string",
+      "headerName": "CMCD-Status",
+      "example": "session_abc123",
+      "added": "2026-08-27",
+      "source": "https://github.com/streaming-video-technology-alliance/common-media-client-data-custom-keys/issues/3"
     },
     {
       "keyName": "org.svta-ap-t",
