@@ -16,6 +16,7 @@ This page is an overview of all registered custom keys. It is generated from the
 | org.svta-ap-c | application | configuration | Application configuration or environment identifier. | string | CMCD-Session | org.svta-ap-c="production" | 2026-03-09 |
 | org.svta-ap-d | application | domain | Domain or origin from which the application is served. | string | CMCD-Session | org.svta-ap-d="app.example.com" | 2026-03-09 |
 | org.svta-ap-n | application | name | Application or site name. | string | CMCD-Session | org.svta-ap-n="MyStreamingApp" | 2026-03-09 |
+| org.svta-ap-si | application | session-id | Identifier of the application session in which the playback occurs. The application session covers all user and application activity between session start and end (typically ended by inactivity or timeout) and may contain zero or more CMCD playback sessions. Aligned with the [OpenTelemetry session.id](https://opentelemetry.io/docs/specs/semconv/general/session/) semantic convention. This key is distinct from the CMCD sid (single playback session), is not a player-level parent session ID (main asset plus ads/interstitials), and is not a user identifier (see org.svta-u-i). | string | CMCD-Status | org.svta-ap-si="session_abc123" | 2026-08-27 |
 | org.svta-ap-t | application | type | Application type (e.g. web, native, embedded). | string | CMCD-Session | org.svta-ap-t="web" | 2026-03-09 |
 | org.svta-ap-v | application | version | Application version. | string | CMCD-Session | org.svta-ap-v="3.0.1" | 2026-03-09 |
 
@@ -71,7 +72,7 @@ This page is an overview of all registered custom keys. It is generated from the
 
 | Key name | Namespace | Description | Value definition | Type & Unit | Header name | Example | Added |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| org.svta-u-i | user | id | Anonymous or hashed user/session identifier (avoid PII). | string | CMCD-Session | org.svta-u-i="usr_abc123" | 2026-03-09 |
+| org.svta-u-i | user | id | Anonymous or hashed user identifier (avoid PII). | string | CMCD-Session | org.svta-u-i="usr_abc123" | 2026-03-09 |
 
 ### Utm keys
 
