@@ -23,7 +23,7 @@ Open [keys/README.md](keys/README.md) for a readable table of all registered key
 Use [keys/registry.json](keys/registry.json): same list, machine-readable.
 
 **Building with the Common Media Library?**  
-We have a small [integration example](examples/common-media-library/) showing how to send these custom keys with [@svta/common-media-library](https://github.com/streaming-video-technology-alliance/common-media-library) (CML).
+We have a small [integration example](examples/common-media-library/) showing how to send these custom keys with [@svta/cml-cmcd](https://www.npmjs.com/package/@svta/cml-cmcd), the CMCD package of the [Common Media Library](https://github.com/streaming-video-technology-alliance/common-media-library) (CML).
 
 ---
 
@@ -38,7 +38,7 @@ Have an idea for a key that would help the community? Open a GitHub issue using 
 - **[CMCDv1 specification (CTA-5004)](https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5004-final.pdf)** – Common Media Client Data specification (version 1).
 - **[CMCDv2 specification (CTA-5004-B)](https://cta-wave.github.io/Resources/common-media-client-data--cta-5004-b.html)** – Common Media Client Data specification (version 2).
 - **[CTA-WAVE (discussion / feedback)](https://github.com/cta-wave/common-media-client-data)** – Where the spec is discussed and evolved.
-- **[Common Media Library](https://github.com/streaming-video-technology-alliance/common-media-library)** – [GitHub](https://github.com/streaming-video-technology-alliance/common-media-library) · [npm](https://www.npmjs.com/package/@svta/common-media-library)
+- **[Common Media Library](https://github.com/streaming-video-technology-alliance/common-media-library)** – [GitHub](https://github.com/streaming-video-technology-alliance/common-media-library) · [npm: @svta/cml-cmcd](https://www.npmjs.com/package/@svta/cml-cmcd)
 - **Registry (JSON):** [keys/registry.json](keys/registry.json)  
 - **Registry (generated table):** [keys/README.md](keys/README.md). Run `node scripts/generate-keys-readme.js` from the repo root to regenerate after editing the JSON.
 - **Schema:** [schemas/registry.schema.json](schemas/registry.schema.json), for validation.
